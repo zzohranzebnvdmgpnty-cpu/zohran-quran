@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zohran Quran</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">☪ Zohran Quran</a>
+
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#read">Read Quran</a>
+            <a href="#juz">Juz / Chapters</a>
+            <a href="#reciters">Reciters</a>
+            <a href="#hadith">Hadith</a>
+            <a href="#bookmarks">Bookmarks</a>
+        </nav>
+
+        <div class="header-tools">
+            <button id="themeToggle" class="icon-button" title="Change theme">
+                🌙
+            </button>
+
+            <button id="settingsButton" class="icon-button" title="Settings">
+                ⚙️
+            </button>
+        </div>
+    </header>
+
+    <!-- SETTINGS PANEL -->
+    <div id="settingsPanel" class="settings-panel hidden">
+        <div class="settings-heading">
+            <h2>Settings</h2>
+            <button id="closeSettings" class="close-button">✕</button>
+        </div>
+
+        <label for="languageSettingSelect">Website Language</label>
+
+        <select id="languageSettingSelect">
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="tl">Tagalog</option>
+        </select>
+
+        <p>Choose the language you want to use for translations.</p>
+    </div>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">WELCOME TO ZOHRAN QURAN</p>
+            <h1>Read. Listen. Understand.</h1>
+            <p>Explore the Holy Quran with translations, recitations and more.</p>
+            <a href="#read" class="main-button">Start Reading</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="feature-card">
+            <h2>114</h2>
+            <p>Surahs</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>30</h2>
+            <p>Juz</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>🎧</h2>
+            <p>Listen to Quran</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>🎙️</h2>
+            <p>Recitation Practice</p>
+        </div>
+    </section>
+
+    <!-- READ QURAN -->
+    <section id="read" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">THE HOLY QURAN</p>
+            <h2>Read Quran</h2>
+            <p>Choose a Surah and begin reading.</p>
+        </div>
+
+        <input
+            type="text"
+            id="surahSearch"
+            placeholder="Search for a Surah..."
+        >
+
+        <div id="surahList" class="surah-list"></div>
+
+        <div id="quranReader" class="quran-reader">
+
+            <h2 id="surahTitle">Select a Surah to begin</h2>
+
+            <div class="reader-tools">
+                <label for="translationSelect">Translation:</label>
+
+                <select id="translationSelect">
+                    <option value="en.sahih">English</option>
+                    <option value="ur.jalandhry">Urdu</option>
+                    <option value="tagalog_rwwad">Tagalog</option>
+                </select>
+
+                <button id="savePositionButton" class="secondary-button">
+                    ☆ Save Reading Position
+                </button>
+            </div>
+
+            <!-- RECITATION PRACTICE -->
+            <div class="recitation-box">
+                <h3>🎙️ Recitation Practice</h3>
+
+                <p>
+                    Press the microphone and read the displayed Ayah aloud.
+                </p>
+
+                <button id="speechButton" class="mic-button">
+                    🎙️ Start Reading
+                </button>
+
+                <p id="speechStatus" class="speech-status">
+                    Microphone is off.
+                </p>
+
+                <div id="speechTranscript" class="speech-transcript">
+                    Your recognised speech will appear here.
+                </div>
+
+                <p class="practice-note">
+                    This is a practice assistant. Speech recognition may
+                    make mistakes and cannot check Tajweed reliably.
+                </p>
+            </div>
+
+            <div id="ayahContainer" class="ayah-container"></div>
+        </div>
+    </section>
+
+    <!-- JUZ -->
+    <section id="juz" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">EXPLORE THE QURAN</p>
+            <h2>Juz / Chapters</h2>
+            <p>Explore all 30 Juz of the Holy Quran.</p>
+        </div>
+
+        <div id="juzList" class="juz-list"></div>
+    </section>
+
+    <!-- RECITERS -->
+    <section id="reciters" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">BEAUTIFUL RECITATIONS</p>
+            <h2>Quran Reciters</h2>
+        </div>
+
+        <div class="reciter-card">
+            <h3>Sheikh Sudais</h3>
+            <p>Listen to Quran recitations.</p>
+        </div>
+    </section>
+
+    <!-- HADITH -->
+    <section id="hadith" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">PROPHETIC TEACHINGS</p>
+            <h2>Hadith</h2>
+            <p>Explore Hadith collections and teachings.</p>
+        </div>
+    </section>
+
+    <!-- BOOKMARKS -->
+    <section id="bookmarks" class="section">
+        <div class="section-heading">
+            <p class="eyebrow">YOUR SAVED PLACES</p>
+            <h2>My Bookmarks</h2>
+            <p>Continue reading from where you stopped.</p>
+        </div>
+
+        <div id="bookmarkList" class="bookmark-list">
+            <p class="empty-bookmarks">
+                You haven't saved any bookmarks yet.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>☪ Zohran Quran</h2>
+        <p>Read. Listen. Understand.</p>
+        <p>May the Quran bring peace and guidance.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
